@@ -38,6 +38,7 @@ export const askGPT = async (text: string, prompt: string): Promise<string> => {
         { role: ChatCompletionRequestMessageRoleEnum.User, content: text },
       ],
       top_p: 0.5,
+      stream: true
     })
     .catch((err) => {
       error(err)
